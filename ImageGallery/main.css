@@ -1,0 +1,106 @@
+/* Reset margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('img/back.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Gallery wrapper for centering and structure */
+.gallery-wrapper {
+    width: 80%;
+    max-width: 1200px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Title styling */
+.gallery-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #222;
+    font-weight: bold;
+}
+
+/* Instruction styling */
+.gallery-instruction {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Main container */
+.gallery-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* Main image */
+.main-image img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+/* Thumbnails container with grid layout */
+.thumbnails {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+/* Thumbnails */
+.thumbnails img {
+    width: 100%;
+    max-width: 100px;
+    height: 75px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: transform 0.3s ease, border 0.3s ease;
+}
+
+/* Hover and active effects */
+.thumbnails img:hover {
+    transform: scale(1.1);
+    border: 2px solid #007BFF;
+}
+
+.thumbnails img.active {
+    border: 2px solid #007BFF;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .gallery-wrapper {
+        padding: 20px;
+    }
+
+    .main-image img {
+        max-height: 300px;
+    }
+
+    .thumbnails img {
+        max-width: 80px;
+        height: 60px;
+    }
+}
